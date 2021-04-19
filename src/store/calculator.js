@@ -11,13 +11,13 @@ class Calculator {
     }
 
     addFirstNumber = (i) => {
-        if (i !== '.' || !this.firstNumber.includes('.')) {
+        if (i !== '.' || this.firstNumber && !this.firstNumber.includes('.')) {
             this.firstNumber = this.firstNumber ? this.firstNumber + `${i}` : i
         }
     }
 
     addSecondNumber = (i) => {
-        if (i !== '.' || !this.secondNumber.includes('.')) {
+        if (i !== '.' || this.secondNumber &&  !this.secondNumber.includes('.')) {
             this.secondNumber = this.secondNumber ? this.secondNumber + `${i}` : i
         }
     }
