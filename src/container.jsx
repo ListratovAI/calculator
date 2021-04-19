@@ -41,6 +41,7 @@ const Operators = (props) => {
                 </div>
             </div>
             <div className='numbers minus' onClick={() => props.toSwitchNumber()}>+/-</div>
+            <div className='numbers equal' onClick={() => props.toGetResult()}>=</div>
         </div>
     )
 }
@@ -77,7 +78,7 @@ const Menu = observer(() => {
     const keyboardEnter = (e) => {
 
         const keys = ['+', '-', '*', '/'];
-        if (!isNaN(+e.key)) {
+        if (!isNaN(+e.key) || e.key === '.') {
             addNumbers(e.key)
         }
         else if (keys.includes(e.key)) {
@@ -105,7 +106,7 @@ const Menu = observer(() => {
 
     return(
         <>
-                        <Display/>
+            <Display/>
             <div className='containerButtons'>
 
                 <div>
@@ -118,14 +119,15 @@ const Menu = observer(() => {
                         >
                         0
                         </div>
+                        <div className='numbers result' onClick={() => {addNumbers('.')}}>.</div>
                         <div className='numbers result' onClick={() => {clearField()}}>C</div>
-                        <div className='numbers result' onClick={() => {getResult()}}>=</div>
                     </div>
                 </div>
                 <Operators 
                     toSecond={(operator)=>clickOperator(operator)}
                     toResult={()=>getResult()}
                     toSwitchNumber={()=>switchNumber()}
+                    toGetResult={()=>getResult()}
                 />
 
             </div>
