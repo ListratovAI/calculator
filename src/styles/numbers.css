@@ -1,0 +1,65 @@
+.containerButtons {
+    display: flex;
+}
+
+.numbersContainers {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+    width: 360px;
+    height: 360px;
+    flex-wrap: wrap-reverse;
+    /* flex-direction: column-reverse; */
+    justify-content: space-between;
+}
+
+.numbers {
+    display: flex;
+    width: 105px;
+    height: 105px;
+    background-color: salmon;
+    border: solid 1px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.num0 {
+    margin-left: 50px;
+    margin-top: 12px;
+}
+
+.display {
+    display: flex;
+    width: 620px;
+    margin-left: 50px;
+    margin-top: 50px;
+    height: 55px;
+    font-weight: bolder;
+    font-size: 30px;
+    border: solid 1px;
+}
+.downBottons {
+    display: flex;
+}
+.result {
+    margin-left: 20px;
+    margin-top: 12px;
+}
+.operators {
+    margin-left: 30px;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    height: 225px;
+    width: 232px;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.minus {
+    margin-top: 15px;
+    margin-left: 29px;
+}
