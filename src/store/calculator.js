@@ -11,11 +11,15 @@ class Calculator {
     }
 
     addFirstNumber = (i) => {
-        this.firstNumber = this.firstNumber ? this.firstNumber + `${i}` : i
+        if (i !== '.' || !this.firstNumber.includes('.')) {
+            this.firstNumber = this.firstNumber ? this.firstNumber + `${i}` : i
+        }
     }
 
     addSecondNumber = (i) => {
-        this.secondNumber = this.secondNumber ? this.secondNumber + `${i}` : i
+        if (i !== '.' || !this.secondNumber.includes('.')) {
+            this.secondNumber = this.secondNumber ? this.secondNumber + `${i}` : i
+        }
     }
 
     setOperator = (operator) => {
