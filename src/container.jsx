@@ -39,9 +39,11 @@ const Operators = (props) => {
                 <div className='numbers' onClick={() => props.toSecond('/')}>
                     /
                 </div>
-            </div>
-            <div className='numbers minus' onClick={() => props.toSwitchNumber()}>+/-</div>
+                            <div className='numbers minus' onClick={() => props.toSwitchNumber()}>+/-</div>
+            <div className='numbers minus' onClick={() => props.toDeleteLast()}>del</div>
             <div className='numbers equal' onClick={() => props.toGetResult()}>=</div>
+            </div>
+
         </div>
     )
 }
@@ -98,6 +100,10 @@ const Menu = observer(() => {
         calculator.switchNumber(isSecond);
     }
 
+    const deleteLast = () => {
+        calculator.deleteLast(isSecond)
+    }
+
     useEffect(() => {
         document.addEventListener('keydown', keyboardEnter, false);
         return () => {
@@ -128,6 +134,7 @@ const Menu = observer(() => {
                     toResult={()=>getResult()}
                     toSwitchNumber={()=>switchNumber()}
                     toGetResult={()=>getResult()}
+                    toDeleteLast={()=>deleteLast()}
                 />
 
             </div>

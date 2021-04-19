@@ -52,7 +52,7 @@
     margin-top: 64px;
     display: flex;
     flex-direction: column;
-    height: 225px;
+    height: 470px;
     width: 232px;
     justify-content: space-between;
     align-content: space-between;
@@ -60,10 +60,10 @@
 }
 
 .minus {
-    margin-top: 13px;
     margin-left: 29px;
 }
 .equal {
-    margin-top: 13px;
+
     margin-left: 29px;
+    height :225px;
 }

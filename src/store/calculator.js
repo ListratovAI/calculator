@@ -62,6 +62,14 @@ class Calculator {
         }
     }
 
+    deleteLast = (isSecond) => {
+        if (!isSecond) {
+            this.firstNumber = this.firstNumber.slice(0, -1)
+        }
+        else {
+            this.secondNumber = this.secondNumber.slice(0, -1)
+        }
+    }
 }
 
 export default new Calculator()
