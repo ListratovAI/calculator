@@ -9,7 +9,6 @@
     width: 360px;
     height: 360px;
     flex-wrap: wrap-reverse;
-    /* flex-direction: column-reverse; */
     justify-content: space-between;
 }
 

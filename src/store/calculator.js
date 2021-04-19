@@ -71,7 +71,6 @@ class Calculator {
             this.firstNumber = this.firstNumber.slice(0, -1)
         }
         else if (isSecond && this.secondNumber && !isNaN(this.secondNumber)) {
-            console.log(this.secondNumber)
             this.secondNumber = String(this.secondNumber).slice(0, -1)
         }
     }

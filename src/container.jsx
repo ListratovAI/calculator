@@ -67,9 +67,6 @@ const Menu = observer(() => {
 
     const getResult = () => {
         calculator.getResult();
-        if (calculator.secondNumber) {
-            setIsSecond(false);
-        }
     }
 
     for (let i = 1; i <= 9; i++) {
@@ -110,6 +107,8 @@ const Menu = observer(() => {
         return () => {
             document.removeEventListener("keydown", keyboardEnter, false);
     }})
+
+    useEffect(()=> setIsSecond(false), [calculator.result])
 
     return(
         <>
