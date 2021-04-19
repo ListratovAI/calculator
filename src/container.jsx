@@ -62,13 +62,14 @@ const Menu = observer(() => {
     }
 
     const clickOperator = (operator) => {
-        calculator.setOperator(operator)
-        setIsSecond(true)
+        setIsSecond(calculator.setOperator(operator))
     }
 
     const getResult = () => {
         calculator.getResult();
-        setIsSecond(false);
+        if (calculator.secondNumber) {
+            setIsSecond(false);
+        }
     }
 
     for (let i = 1; i <= 9; i++) {

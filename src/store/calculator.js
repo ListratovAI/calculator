@@ -19,7 +19,11 @@ class Calculator {
     }
 
     setOperator = (operator) => {
-        this.operator = operator
+        if (this.firstNumber) {
+            this.operator = operator
+            return true
+        }
+        return false
     }
 
     getResult = () => {
@@ -63,11 +67,12 @@ class Calculator {
     }
 
     deleteLast = (isSecond) => {
-        if (!isSecond) {
+        if (!isSecond && this.firstNumber) {
             this.firstNumber = this.firstNumber.slice(0, -1)
         }
-        else {
-            this.secondNumber = this.secondNumber.slice(0, -1)
+        else if (isSecond && this.secondNumber && !isNaN(this.secondNumber)) {
+            console.log(this.secondNumber)
+            this.secondNumber = String(this.secondNumber).slice(0, -1)
         }
     }
 }
